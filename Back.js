@@ -17,11 +17,9 @@ let products = [
 ];
 
 app.get('/products', (req, res) => {
-    setTimeout(() => {
-        res.json(products);
-    }, 3000); // Delay response by 3 seconds
+    res.json(products);
 });
-/* line 19-23 terdapat bug karena menyebabkan delay respon selama 3 detik, segera perbaiki perbaiki!!! */
+/* Sudah diperbaiki pak */
 
 app.get('/products/:id', (req, res) => {
     const id = parseInt(req.params.id);
